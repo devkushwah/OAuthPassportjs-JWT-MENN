@@ -42,7 +42,7 @@ app.get('/auth/google',
   passport.authenticate('google', { session: false, scope: ['profile', 'email'] }));
 
 app.get('/auth/google/callback',
-  passport.authenticate('google', { session: false, failureRedirect: `${process.env.FRONTEND_HOST}/account/login` }),
+  passport.authenticate('google', { session: false, failureRedirect: `${process.env.FRONTEND_HOST}/account/login` }), 
   (req, res) => {
 
     // Access user object and tokens from req.user
@@ -54,7 +54,7 @@ app.get('/auth/google/callback',
   });
 
 
-  
+
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`)
 })
