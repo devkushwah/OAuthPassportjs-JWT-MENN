@@ -53,6 +53,8 @@ app.get('/auth/google/callback',
     res.redirect(`${process.env.FRONTEND_HOST}/user/profile`);
   });
 
+
+  
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`)
 })
